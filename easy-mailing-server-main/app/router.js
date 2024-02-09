@@ -30,6 +30,7 @@ router.get('/api/tracker/:contactToken/:campaignToken/cid:pixel', statisticContr
 router.post('/api/validateCampaign', authToken, campaignController.validateCampaign);
 router.post('/api/addMailing', authToken, mailingController.addMailing);
 router.post('/api/login', userController.login);
+router.post('/api/signup', userController.signup);
 router.post('/api/createContactList', authToken, contactController.createContactList);
 router.post('/api/addContact', authToken, contactController.addContact);
 router.post('/api/createCampaign', authToken, campaignController.createCampaign);
