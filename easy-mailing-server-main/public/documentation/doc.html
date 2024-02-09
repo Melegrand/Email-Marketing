@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documentation api</title>
+        <link rel="stylesheet" type="text/css" href="/api/doc/style.css">
+        <script defer="true" src="/api/doc/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Documentation Univinfo api send mailing</h1>
+        </header>
+        <main>
+            <nav id="nav">
+                <h2>Endpoints</h2>
+                <button id="get">get</button>
+                <ul class="closed">
+                    <li><a href="#listCampaign">/listCampaign</a></li>
+                    <li><a href="#contactList">/contactList/:id</a></li>
+                    <li><a href="#contactListUnsuscribed">/contactListUnsuscribed/:id</a></li>
+                    <li><a href="#listUser">/listUser</a></li>
+                    <li><a href="#user">/user/:id</a></li>
+                    <li><a href="#campaignDetail">/campaignDetail/:id</a></li>
+                    <li><a href="#detailCampaignHasContact">/detailCampaignHasContact/:id</a></li>
+                    <li><a href="#unsubscribed">/unsubscribed/:tok</a></li>
+                    <li><a href="#subscribed">/subscribed/:tok</a></li>
+                    <li><a href="#statistic">/statistic/:id</a></li>
+                    <li><a href="#tracker">/tracker/:tokenUser/:campaignToken/cid:pixel</a></li>
+                    <li><a href="#invalidContact">/:idCampaign/:nameList/invalidContact</a></li>
+                </ul>
+                <button id="post">post</button>
+                <ul class="closed">
+                    <li><a href="#validateCampaign">/validateCampaign</a></li>
+                    <li><a href="#addMailing">/addMailing</a></li>
+                    <li><a href="#login">/login</a></li>
+                    <li><a href="#createContactList">/createContactList</a></li>
+                    <li><a href="#addContact">/addContact</a></li>
+                    <li><a href="#createCampaign">/createCampaign</a></li>
+                    <li><a href="#testSendCampaign">/testSendCampaign</a></li>
+                </ul>
+                <button id="delete">delete</button>
+                <ul class="closed">
+                    <li><a href="#deleteContactList">/deleteContactList/:idCampaign/:idList/:nameList</a></li>
+                </ul>
+            </nav>
+
+
+            <section class="get">
+                <article id="listCampaign">
+                    <h3>listCampaign <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de renvoyé une liste de toutes les campagnes</p>
+                    <img src="../codesnap/listCampaign.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="contactList">
+                    <h3>contactList/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer tout les contacts liés à la campagne de l'id passé en paramètre</p>
+                    <img src="../codesnap/contactList.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="contactListUnsuscribed">
+                    <h3>contactListUnsuscribed/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer tout les contacts désinscrit de cette campagne</p>
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="listUser">
+                    <h3>listUser <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de récuperer tout les utilisateurs inscrit</p>
+                    <img src="../codesnap/listUser.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="user">
+                    <h3>user/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de récuperer les information de l'utilisateur qui demande à se connecté</p>
+                    <img src="../codesnap/user.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="campaignDetail">
+                    <h3>campaignDetail/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer les detail de la campagne  selon l'id passé en paramètre</p>
+                    <img src="../codesnap/campaignDetail.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+                
+                <article id="tracker">
+                    <h3>campaignDetail/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de tracker l’ouverture de mails</p>
+                    <img src="../codesnap/tracker.png" alt="">
+                    <p>En cas d'erreur le message "false" en json sera renvoyé</p>
+                </article>
+
+                <article id="invalidContact">
+                    <h3>/:idCampaign/:nameList/invalidContact <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer les contacts invalides</p>
+                </article>
+
+
+
+
+
+
+                <article id="detailCampaignHasContact">
+                    <h3>detailCampaignHasContact/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer les informations dans la table de liaison "campaign_has_contact" à partir d'un id de campagne envoyé en paramètre</p>
+                    <img src="../codesnap/detailCampaignHasContact.png" alt="">
+                    <p>En cas d'erreur le statut 500 sera renvoyé</p>
+                </article>
+
+                <article id="unsubscribed">
+                    <h3>unsubscribed/:tok <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet la désinscription d'un contact de la campagne avec le token renvoyé en paramètre</p>
+                </article>
+                <article id="subscribed">
+                    <h3>subscribed/:tok <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet la réinscription d'un contact de la campagne avec le token renvoyé en paramètre</p>
+                </article>
+                <article id="statistic">
+                    <h3>statistic/:id <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#get"><mark>get</mark></a> permet de recuperer les statistiques d'une campagne avec son id</p>
+                    <img src="../codesnap/statistic.png" alt="">
+                </article>
+            </section>
+            <section class="post">
+                <article id="validateCampaign">
+                    <h3>validateCampaign <a href="#nav">🔝</a></h3>
+                    <p>Cette route sert <a href="#post"><mark>post</mark></a> à mettre à jour l'etat complet (colonne full) de la campagne dans la base de données. Quand la validation du mailing et l'ajout de contact se fait, la colonne full passe de false à true</p>
+                </article>
+                <article id="addMailing">
+                    <h3>addMailing <a href="#post"><mark>post</mark></a> <a href="#nav">🔝</a></h3>
+                    <p>Cette route sert à mettre à jour l'etat du mailing. Quand l'ajout d'un texte est validé, dans  la table "campaign", la colonnes "textCampaign" se mets à jour avec le texte, la colonne "mailing" passe à true. L'ajout d'un lien est une option et se mettra à jour à la validation du mailing.</p>
+                </article>
+                <article id="login">
+                    <h3>login <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#post"><mark>post</mark></a> sert à la connexion. Grace à l'email ainsi que le mot de passe, l'utilisateur sera connecté. Lorsque la connexion est valide, le statut 200 sera renvoyé.</p>
+                </article>
+                <article id="createContactList">
+                    <h3>createContactList <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#post"><mark>post</mark></a> sert à la creation de liste de contacts. La liste est envoyé sous forme de fichier csv. Les nouveau contacts valides seront ajoutés dans la table "contact" ainsi que , les contacts déjà existants seront Lorsque la creation est valide, le statut 200 sera renvoyé ainsi que le nombre de contact invalide sous format json.</p>
+                </article>
+                <article id="addContact">
+                    <h3>addContact <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#post"><mark>post</mark></a> </p>
+                </article>
+                <article id="createCampaign">
+                    <h3>createCampaign <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#post"><mark>post</mark></a> sert à la creation de la campagne.</p>
+                </article>
+                <article id="testSendCampaign">
+                    <h3>testSendCampaign <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#post"><mark>post</mark></a> sert à envoyé un email de test pour avoir un aperçu de l'email dans un client mail.</p>
+                </article>
+            </section>
+            <section class="delete">
+                <article id="deleteContactList">
+                    <h3>/deleteContactList/:idCampaign/:idList/:nameList <a href="#nav">🔝</a></h3>
+                    <p>Cette route <a href="#delete"><mark>delete</mark></a> permet de supprimer une liste de contact ou un contact seul</p>
+                </article>
+            </section>
+        </main>
+        <script>
+            
+        </script>
+    </body>
+</html>

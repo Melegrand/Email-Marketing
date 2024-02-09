@@ -1,0 +1,158 @@
+@import '../vars';
+@import '../mixin.scss';
+
+.verification__mailing {
+    border-radius: 1.5rem;
+    border: 1px solid #000;
+    width: 90%;
+    max-width: 50rem;
+    margin: 3rem auto 5rem;
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.12);
+    color: $primary-color;
+    &__section {
+        border: 3px solid #000;
+        width: 95%;
+        margin: 1rem auto;
+        &__header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &__img {
+                width: 50%;
+                margin: 2rem;
+                img {
+                    max-width: 5rem;
+                }
+            }
+            h1 {
+                display: block;
+                width: 100%;
+                font-size: 2rem;
+                text-align: center;
+                margin: 0.5rem 2rem;
+            }
+        }
+        &__main {
+            width: 100%;
+            padding: 1rem;
+            h2 {
+                text-align: right;
+                margin: 2rem auto;
+                width: 60%;
+            }
+            p {
+                resize: vertical;
+                width: 80%;
+                height: 5rem;
+                margin: 0 auto 2rem;
+                a {
+                    padding: 0.5rem;
+                }
+            }
+            &__img {
+                width: 80%;
+                max-width: 15rem;
+                margin: auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__footer {
+            background-color: #9f9d9d;
+            &__container__contact {
+
+                display: flex;
+                padding: 1rem;
+                &__socialNetworks {
+                    display: flex;
+                    width: 50%;
+                    justify-content: center;
+                    a {
+                        width: 3rem;
+                        height: 3rem;
+                        display: block;
+                        margin: 1rem 0.5rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                &__adressBusiness {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 50%;
+                    padding-left: 1rem;
+                }
+            }
+            &__unsubscribe {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                padding-right: 1rem;
+                height: 2rem;
+                background-color: #fff;
+            }
+        }
+    }
+    form {
+        width: 95%;
+        margin: 1rem auto;
+        fieldset {
+            border: none;
+        }
+        label, input[type=email], input[type=submit], p {
+            display: block;
+            width: 100%;
+            margin: auto;
+            height: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        input[type=submit] {
+            background-color: $primary-color;
+            border: 2px solid $primary-color;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: $primary-color;
+            }
+        }
+        p {
+            text-align: center;
+        };
+        @include mid {
+            padding: 1rem 0;
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+            label, p {
+                margin: 1rem 0;
+                width: 48%;
+            }
+            input[type=text], input[type=submit] {
+                display: inline;
+                width: 48%;
+                margin: 0;
+            }
+        }
+    }
+    &__button__send, &__paragraph {
+        text-decoration: none;
+        color: #fff;
+        border: $primary-color solid 2px;
+        background-color: $primary-color;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        margin: 0.5rem auto 1rem;
+        border-radius: 0 0 0.9rem 0.9rem;
+        &:hover {
+            background-color: #fff;
+            color: $primary-color;
+        }
+    }
+}

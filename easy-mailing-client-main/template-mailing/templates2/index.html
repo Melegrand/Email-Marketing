@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            width: 100%; 
+            min-height: 100vh;
+        }
+        .container__mailing {
+            border: 1px solid #000;
+            width: 100%;
+            max-width: 50rem;
+            margin: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+                    
+        }
+        header {
+            width: 100%; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        header p {
+            margin: 0;
+            font-size: 0.6rem;
+        }
+        .header__container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+        header img {
+            margin: 2rem;
+        }
+        header p {
+            font-size: 1rem;
+            margin-left: 2rem;
+        }
+        .main {
+            width: 95%; 
+            margin: 0 auto; 
+            padding: 5rem 1rem;
+        }
+        .main h1 {
+            display: inline-block;
+        }
+        .main p {
+            display: block; 
+            width: 90%;
+        }
+        .footer {
+            margin: auto auto 0; 
+            width: 100%;
+            background-color: #707070;
+            color: #fff;
+
+        }
+        .footer__contact {
+            display: 100%;
+            display: flex;
+            height: 4rem;
+            align-items: center;
+        }
+        .footer__logo_network {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer__logo_network a {
+            width: 2rem;
+            margin: 0.2rem;
+        }
+        .footer__logo_network a img {
+            width: 100%;
+        }
+        .link {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .other {
+            font-size: 0.6rem;
+            text-align: center;
+        }
+        .other a {
+            margin-bottom: 1rem;
+        }
+        @media screen and (min-width: 25rem) {
+            .header__container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .other {
+                font-size: 0.8rem;
+            }
+        }
+        @media screen and (min-width: 35rem) {
+            .header__container {
+                width: 60%;
+            }
+            .other {
+                font-size: 1rem;
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 1rem;
+            }
+            .other p {
+                margin: 0;
+            }
+            .other a {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <section class="container__mailing">
+        <header>
+            <div class="header__container">
+                <div class="header__logo"><img src="logo.png" alt="Le logo de l'entreprise"></div>
+                <div class="header__address">
+                    <p><span class="address__business">Oclock</span></p>
+                    <p><span class="address__number">10</span> <span class="address__way">rue de Penthievre</span></p>
+                    <p><span class="address__zip">75008</span> <span class="address__city">Paris</span></p>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <h1>Bonjour Mme Martin,</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum sit ea soluta dolor dolores quo facilis, officia praesentium quidem deserunt cupiditate, excepturi delectus! Similique nihil dicta ad cumque facilis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum sit ea soluta dolor dolores quo facilis, officia praesentium quidem deserunt cupiditate, excepturi delectus! Similique nihil dicta ad cumque facilis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum sit ea soluta dolor dolores quo facilis, officia praesentium quidem deserunt cupiditate, excepturi delectus! Similique nihil dicta ad cumque facilis?</p>
+        </main>
+        <footer class="footer">
+            <div class="footer__contact">
+                <div class="footer__logo_network">
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./picto_linkedn_W.png" alt="logo linkedin"></a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./picto_facebook_W.png" alt="logo facebook"></a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./picto_twitter_W.png" alt="logo twitter"></a>
+                </div>
+                <a href="#" class="link">Site internet</a>
+            </div>
+            <div class="other">
+                <p>Si vous avez du mal à visualisé ce message, <a href="http://" target="_blank" rel="noopener noreferrer">cliquez ici</a></p>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Désinscription</a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
+

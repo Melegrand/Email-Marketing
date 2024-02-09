@@ -1,0 +1,21 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+footer {
+  margin-top: auto;
+  height: 5rem;
+  background-color: $header-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}

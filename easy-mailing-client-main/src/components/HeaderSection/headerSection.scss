@@ -1,0 +1,58 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.headerSection {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    height: 2.6rem;
+    background-color: $secondary-color;
+    position: relative;
+    border-bottom: 1px solid $primary-color;
+    border-radius: 1.4rem 1.32rem 0 0;
+    @include mid {
+        height: 3.5rem;
+    }
+    a {
+        text-decoration: none;
+        background-color: $primary-color;
+        font-size: 1.2rem;
+        padding: 0.56rem 1rem;
+        color: #fff;
+        width: 20%;
+        max-width: 8.5rem;
+        border-radius: 1.2rem 0 0 0;
+        display: flex;
+        align-items: center;
+        @include mid {
+            height: 3.5rem;
+            justify-content: space-around;
+            width: 30%;
+        }
+    }
+    .returnText {
+        display: none;
+        @include mid {
+            display: block;
+        }
+    }
+    &__title {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0 1rem;
+        text-align: right;
+        color: $primary-color;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        @include small {
+            font-size: 1.3rem;
+        }
+        @include mid {
+            font-size: 2rem;
+        }
+    }
+}

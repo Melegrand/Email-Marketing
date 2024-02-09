@@ -1,0 +1,137 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.header {
+    text-decoration: none;
+    background-color: $header-background;
+    
+    &__navigation {
+        &__title {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1, span {
+                padding: 1rem;
+                text-align: center;
+            }
+            @include mid {
+                border-bottom: 1px solid $primary-color;
+            }
+            @include mid_tablet {
+                border-bottom: none;
+            }
+
+            &__element {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            @include mid {
+                border-bottom: 1px solid $primary-color;
+            }
+            @include mid_tablet {
+                border-bottom: none;
+                margin-right: 0.75rem;
+            }
+            li {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                a {
+                    text-align: center;
+                    padding: 0.5rem 1rem;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 100%;
+                    @include small {
+                        padding: 0.8rem 0.2rem;
+                    }
+                    @include mid {
+                        padding: 1rem 0.2rem;
+                    }
+                    @include tablet {
+                        padding: 1rem 1.8rem;
+                    }
+                    @include desktop {
+                        padding: 1rem 2.2rem;
+                    }
+                    @include big {
+                        padding: 1rem 3rem;
+                    }
+                    position: relative;
+                    &:hover {
+                        scale: 1.1;
+                        @include mid_tablet {
+                            &::after {
+                                content: '';
+                                scale: 1;
+                                position: absolute;
+                                bottom: 0;
+                                width: 90%;
+                                height: 4px;
+                                border-radius: 2px;
+                                background-color: $primary-color;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+                &::before, &:last-child::after {
+                    content: '';
+                    margin: auto;
+                    height: 1px;
+                    width: 90%;
+                    background-color: $primary-color;
+                    @include mid {
+                        display: none;
+                    }
+                }
+                &:first-child::before, &:last-child::after {
+                    width: 100%;
+                }
+                // @include mid {
+                //     &:first-child, &:last-child {
+                //         background-color: red;
+                //         // width: 10rem;
+                //     }
+                // }
+                @include mid_tablet {
+                    border-left: 1px solid $primary-color;
+                }
+            }
+            @include mid {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+        @include mid_tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.expanded {
+    display:flex;
+}
+
+.evitement {
+    position: absolute;
+    left: -10000000000rem;
+}
+
+.evitement:focus {
+    position: static;
+    color: $primary-color;
+}

@@ -1,0 +1,51 @@
+@import '../../vars.scss';
+@import '../../mixin.scss';
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $primary-color;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include tablet {
+        height: auto;
+        width: 35%;
+    }
+    
+    @include very_big {
+        height: auto;
+        width: 35%;
+    }
+    
+    &__title{
+        text-align: center;
+        color: $primary-color;
+        padding: 1rem;
+        font-size: 1.7rem;
+    }
+    
+    &__informations {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
+        border-bottom: 3px solid $secondary-color;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        
+        &__element {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    }
+    
+    &__campaign__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

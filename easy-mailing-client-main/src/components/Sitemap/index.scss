@@ -1,0 +1,46 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+
+.section {
+
+    @include tablet {
+        width: 33%;
+    }
+
+    &__nav{
+        &__container {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+
+            &__element {
+                border: 1px solid $primary-color;
+                // width: 80%;
+                margin: 1rem 0;
+                &:first-child {
+                    margin-top: 2rem;
+                }
+                &:last-child {
+                    margin-bottom: 2rem;
+                }
+                &__link {
+                    padding: 1rem;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    display: block;
+                    &:hover {
+                        // text-decoration: underline $secondary-color 3px;
+                        text-underline-offset: 8px;
+                        background: #e7e7e7;
+                    }
+                }
+                &:hover {
+                    scale: 1.01;
+                    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.3);
+                }
+            }
+        }
+    }
+}

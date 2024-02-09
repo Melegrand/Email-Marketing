@@ -1,0 +1,11 @@
+@import '../../vars.scss';
+@import '../../mixin.scss';
+@import '../../../table.scss';
+
+.section {
+    .tableContainer {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2rem;
+    }
+}

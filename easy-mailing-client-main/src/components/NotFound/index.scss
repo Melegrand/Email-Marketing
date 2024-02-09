@@ -1,0 +1,58 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+.section {
+    &__notFound {
+        height: 40rem;
+        @include mid {
+            height: 25rem;
+        }
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%) scale(3);
+            &:nth-child(1) {
+                z-index: 2;
+                fill: $background-color;
+                animation: move 1s 3s ease-out forwards;
+            }
+            &:nth-child(2) {
+                z-index: 1;
+                left: 50%;
+                animation: fillLetter 1s 2s ease-out forwards;
+            }
+        }
+        p {
+            position: absolute;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            -webkit-text-stroke: 4px $secondary-color;
+            text-stroke: 4px $secondary-color;
+            text-align: center;
+            width: 100%;
+            color: transparent;
+            letter-spacing: 0.5rem;
+            top: 15%;
+            font-size: 6rem;
+        }
+    }
+}
+@keyframes strokeLetter {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fillLetter {
+    from {
+        stroke: 0;
+    }
+    to {
+        stroke: 2px;
+        fill: $primary-color;
+        transform: translate(-50%, -50%) scale(3);
+    }
+}
+@keyframes move {
+    to {
+        transform: translate(-60%, -50%) scale(3);
+    }
+}

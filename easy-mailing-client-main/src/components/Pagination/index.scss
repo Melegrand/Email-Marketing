@@ -1,0 +1,38 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    // position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+}
+  
+.pagination button {
+    margin: 0 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: $background-color;
+    padding: 2px 5.25px;
+    border: 1px solid $secondary-color;
+    color: $primary-color;
+
+    @include small {
+      margin: 0 3px;
+      padding: 3px 8px;
+    }
+    @include mid {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+}
+  
+.pagination button.current-page {
+    background: $primary-color;
+    color: white;
+    font-weight: bold;
+}
+  

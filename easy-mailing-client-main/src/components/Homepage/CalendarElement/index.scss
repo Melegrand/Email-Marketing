@@ -1,0 +1,49 @@
+@import '../../vars.scss';
+@import '../../mixin.scss';
+
+
+// Element parent du calendrier
+.demo{
+  &-app-main {
+    border: 1px solid $primary-color;
+    padding: 1rem;
+    display: flex;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 100%;
+
+    @include tablet {
+      width: 65%;
+      height: auto;
+    }
+  
+    @include very_big {
+      width: 65%;
+      height: auto
+    }
+  }
+
+  .fc {
+    // Bouton du choix de la vue au mois/semaine etc.. Ici on ne laisse pas de choix car demande de vue au mois uniquement
+    &-toolbar-chunk:nth-child(3) {
+      display: none;
+    }
+      // Classe qui gère la case de la date du jour. Modification pour mettre en gras et soulgné le jour pour être pus visible,
+      // dans le cadre de l'accessibilité.
+    &-day-today {
+      font-weight: 900;
+      text-underline-offset: 3px;
+      text-decoration: underline;
+    }
+  }
+}
+.campaign__title{
+  color: $dark-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.campaign__title:hover {
+  cursor: pointer;
+}

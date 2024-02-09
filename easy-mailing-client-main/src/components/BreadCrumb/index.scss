@@ -1,0 +1,29 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.breadcrumbs {
+    &__list{
+        padding: 1rem;
+        justify-content: start;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        color: $primary-color; 
+        font-size: 1rem;
+        align-items: center;
+
+        &__element {
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+}
+.breadcrumb-active {
+    text-decoration: underline 3px $secondary-color; 
+    text-underline-offset: 6px;
+    font-weight: bold; 
+  }
+  
+.breadcrumb-not-active {
+    text-decoration: none; 
+}

@@ -1,0 +1,60 @@
+@import '../mixin.scss';
+@import '../vars.scss';
+
+
+.unsubscribed {
+    height: 100vh;
+    display: flex;
+
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $light-text;
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+
+        @include tablet {
+            width: 30%;
+        }
+        
+        &--error {
+            color: $error-text
+        }
+
+        &__form {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+        }
+    }
+}
+
+.btn--unsubscribed {
+    color: #fff;
+    padding: 0.5rem;
+    max-width: 100%;
+    font-size: 1rem;  
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
+    font-size: 0.65rem;
+    &:hover {
+        background-color: #fff;
+        color: $primary-color;
+    }
+
+    @include small {
+        font-size: 0.75rem;
+    }
+
+    @include big {
+        font-size: 1.2rem;
+    }   
+}

@@ -1,0 +1,40 @@
+@import '../../vars.scss';
+@import '../../mixin.scss';
+
+// Classe parente de la légende, on gère avec le responsive, l'alignement et la disposition
+.legend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+    border:1px solid $primary-color;
+
+    @include tablet {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    // classe qui gère la légende elle même
+    &__container {
+        @include small_tablet  {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        // Chaque élément de légende est aligné à gauche et à un padding défini
+        &__element {
+            display: flex;
+            padding: 1rem;
+            text-align: start;
+            gap: 1rem;
+        }
+
+        // Pour chaque case de couleur de la légende, on gère la taille et le design
+        &__color {
+            padding: 0.5rem 2rem;
+            border: 1px solid $light-text;
+        }
+    }
+}

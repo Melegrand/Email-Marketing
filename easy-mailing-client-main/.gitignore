@@ -1,0 +1,8 @@
+.parcel-cache
+dist
+node_modules
+.DS_Store
+.env
+invalidList/
+package-lock.json
+.vercel

@@ -1,0 +1,36 @@
+@import '../mixin.scss';
+@import '../vars.scss';
+
+// cette classe gère la disposition et le responsive avec la mixin des deux composants de la page d'accueil
+.home {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+
+    &__calendar {
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 1rem;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+}  
+
+.current, .current:hover {
+    background-color: $calendar-current-color;
+}
+
+.programmed, .programmed:hover {
+    background-color: $calendar-programmed-color;
+}
+
+.past, .past:hover {
+    background-color: $calendar-past-color;
+}

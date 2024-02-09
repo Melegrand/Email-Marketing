@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    // margin: auto;
+    border-collapse: collapse;
+    caption {
+        padding: 1rem;
+        font-weight: 900;
+    }
+    thead {
+        th {
+            padding: 0.6rem;
+        }
+    }
+    th, td {
+        border: #000 solid 1px;
+    }
+    .hidden {
+        display: none
+    }
+    tbody {
+        td {
+            padding: 0.5rem;
+            text-align: center;
+            .empty {
+                height: 2.5rem;
+                font-weight: 700;
+                @include mid {
+                    font-size: 1.5rem;
+                }
+            }
+            button {
+                text-decoration: none;
+                color: #fff;
+                border: $primary-color solid 1px;
+                background-color: $primary-color;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1rem;
+                margin: auto;
+                &:hover {
+                    background-color: #fff;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+            span{
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+        }
+    }
+}

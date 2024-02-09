@@ -1,0 +1,90 @@
+@import '../vars';
+@import '../mixin';
+
+.section {
+    .msg-warning {
+        width: 90%;
+        margin: auto;
+    }
+    &__main {
+        // padding: 1.5rem;
+        &__container {
+            background-color: $background-color-paragraph;
+            margin: 1rem auto;
+            color: $primary-color;
+            padding: 0.5rem;
+            @include mid {
+                display: flex;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__paragraph {
+            padding: 0.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:nth-child(1) {
+                border-bottom: 1px solid $primary-color;
+                @include mid {
+                    min-width: 320px;
+                    border-bottom: none;
+                    width: 45%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        &__linkContainer {
+            margin: 2rem auto 0;
+            &__link:last-child {
+                border-radius: 0 0 0.9rem 0.9rem;
+            }
+            @include mid {
+                display: flex;
+                justify-content: space-between;
+                &__link:first-child {
+                    margin-right: 0.5rem;
+                    border-radius: 0 0 0 0.9rem;
+                }
+                &__link:last-child {
+                    margin-left: 0.5rem;
+                    border-radius: 0 0 0.9rem 0;
+                }
+            }
+            // &__link:first-child {
+            //     @include mid {
+            //         border-radius: 0 0 0 0.9rem;
+            //     }
+            // // }
+            // &__link:last-child {
+            //     border-radius: 0 0 0.9rem 0.9rem;
+                // @include mid {
+                //     border-radius: 0 0 0.9rem 0;
+                // }
+            // }
+            &__link {
+                width: 100%;
+                // background-color: $primary-color;
+                // border: 2px solid $primary-color;
+                // color: #fff;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // padding: 0.5rem 1rem;
+                // text-decoration: none;
+                // text-align: center;
+                // margin: 1rem auto 0;
+                // &:hover {
+                //     background-color: #fff;
+                //     color: $primary-color;
+                // }
+                @include mid {
+                    margin: 0;
+                    width: 48%;
+                }
+            }
+        }
+    }
+}

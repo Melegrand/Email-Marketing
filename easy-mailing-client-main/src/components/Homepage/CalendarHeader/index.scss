@@ -1,0 +1,42 @@
+@import '../../vars.scss';
+@import '../../mixin.scss';
+
+.list {
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
+
+        &__container {
+            display: flex;
+            gap: 0.5rem;
+
+            &__btn {
+                padding: 0.5rem;
+                color: $primary-color;
+                background-color: $header-background;
+                border: 2px solid $secondary-color;
+                font-size: 1.2rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__month {
+            font-weight: bold;
+            color: $primary-color;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.ample {
+    padding: 0 2rem;
+    font-weight: bold;
+}

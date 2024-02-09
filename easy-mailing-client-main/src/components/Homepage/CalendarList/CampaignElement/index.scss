@@ -1,0 +1,19 @@
+@import '../../../vars.scss';
+
+.current__campaign {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid $dark-text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__link {
+        color: $dark-text;
+    }
+}
