@@ -1,0 +1,127 @@
+@import '../vars';
+@import '../mixin';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login {
+    width: 90%;
+    max-width: 30rem;
+    margin: 3rem auto;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    @include small_tablet {
+        max-width: 50rem;
+        box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.15);
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 2.6rem;
+        background-color: $secondary-color;
+        border-bottom: 1px solid #000;
+        border-radius: 2rem 2rem 0 0;
+        &__title {
+            width: 100%;
+            font-size: 1.8rem;
+            color: $primary-color;
+            @include mid {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__containersignup {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        @include small_tablet {
+            display: flex;
+            align-items: center;
+        }
+        &__logo {
+            display: none;
+            @include small_tablet {
+                display: flex;
+                width: 50%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__footersignup {
+            background-color: $background-color;
+            border-radius: 0 0 2rem 2rem;
+            p {
+                text-align: center;
+                padding: 0.5rem;
+            }
+            @include small_tablet {
+                // position: absolute;
+                // bottom: 0;
+                // right: 0;
+                // width: 50%;
+            }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            fieldset {
+                border: none;
+                padding: 1rem;
+            }
+
+            &__obligatory {
+                padding: 1rem;
+            }
+
+            &__error {
+                margin: 1rem auto;
+                width: 90%;
+            }
+            
+            label {
+                margin: 1rem auto 0;
+                display: block;
+                width: $size-input-campaign;
+                height: 1.5rem;
+                color: $primary-color;
+            }
+            input[type=email], input[type=password], input[type=text] {
+                height: 2rem;
+                display: block;
+                margin: auto;
+                width: $size-input-campaign;
+                color: $primary-color;
+                border: 2px solid $primary-color;
+                cursor: pointer;
+            }
+            @include small_tablet {
+                width: 50%;
+            }
+            &__buttonContainer {
+                width: $size-input-campaign;
+                margin: 1.5rem auto;
+                display: flex;
+                flex-direction: column;
+                input[type=submit] {
+                    margin: 1rem auto;
+                    width: 50%;
+                    height: 3rem;
+                    background-color: $primary-color;
+                    border: 2px solid $primary-color;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #fff;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

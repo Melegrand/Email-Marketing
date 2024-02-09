@@ -123,6 +123,7 @@ const Login = ({setUser}) => {
           </fieldset>
         </form>
         <footer className="login__container__footer">
+          <p>Pas encore inscrit ? <a href="/signup">S'enregistrer</a></p>
           <p>Besoin d'aide ? <a href="#">Contactez-nous</a></p>
         </footer>
       </div>

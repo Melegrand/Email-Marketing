@@ -5,6 +5,7 @@ import './index.scss';
 // Définition des routes et de leurs miettes de pain associées
 const routes = [
     { path: '/', breadcrumb: 'Accueil' },
+    { path: '/signup', breadcrumb: 'inscription' },
     { path: '/creation', breadcrumb: 'création de campagne' },
     { path: '/liste', breadcrumb: 'liste des campagnes' }, 
     { path: '/liste/detail', breadcrumb: null },

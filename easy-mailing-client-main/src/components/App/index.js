@@ -20,6 +20,7 @@ import Sitemap from '../Sitemap';
 import InvalidContact from '../HandleContacts/InvalidContact';
 import * as dotenv from 'dotenv';
 import Footer from '../Footer';
+import Signup from '../Signup';
 dotenv.config();
 // Mon composant App gère uniquement le menu qui lui se chargera de gérer l'affichage des différents composants en plus du menu.
 const App = () => {
@@ -88,6 +89,7 @@ const App = () => {
             <Route path="/liste/detail/:currentId" element={<Guard><DetailsCampaign fetchCampaignList={fetchCampaignList}/></Guard>} />
             <Route path="/liste/detail/:currentId/statistic" element={<Guard><Statistic listCampaign={listCampaign}/></Guard>} />
             {!user && <Route path="/" element={<Login setUser={setUser} />} />}
+            {!user && <Route path="/signup" element={<Signup setUser={setUser} />} />}
             <Route path="/liste/detail/:idCampaign/contacts" element={<Guard><HandleContact listCampaign={listCampaign} /></Guard>} />
             <Route path="/liste/detail/:idCampaign/contacts/creationContact" element={<Guard><AddContact listCampaign={listCampaign}/></Guard>} />
             <Route path="/liste/detail/:idCampaign/contacts/invalidContact/:nameFile" element={<Guard><InvalidContact /></Guard>} />
